@@ -92,10 +92,11 @@ function App() {
     <>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Alvin Phang Lehenn portfolio home">
-          <span className="brand-mark" aria-hidden="true">
-            <span>A</span>
-            <span>P</span>
-          </span>
+          <img
+            src="AP logo.png"
+            alt="AP logo"
+            className="brand-mark-logo"
+          />
           <span>Alvin Phang</span>
         </a>
         <button
