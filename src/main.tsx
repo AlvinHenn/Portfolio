@@ -91,9 +91,12 @@ function App() {
   return (
     <>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="Phang Lehenn portfolio home">
-          <span className="brand-mark">PL</span>
-          <span>Phang Lehenn</span>
+        <a className="brand" href="#top" aria-label="Alvin Phang Lehenn portfolio home">
+          <span className="brand-mark" aria-hidden="true">
+            <span>P</span>
+            <span>L</span>
+          </span>
+          <span>Alvin Phang</span>
         </a>
         <button
           className="nav-toggle"
@@ -116,8 +119,8 @@ function App() {
       <main id="top">
         <section className="hero section">
           <div className="hero-content">
-            <p className="eyebrow">Full-stack mobile app developer</p>
-            <h1>Building practical software across web, mobile, backend, and applied AI.</h1>
+            <p className="eyebrow">Phang Lehenn · Alvin</p>
+            <h1>Full-stack mobile app developer building practical software.</h1>
             <p className="hero-copy">
               Final-year BSc Computer Science student at Heriot-Watt University with hands-on
               experience in React, Spring Boot, Flutter, PostgreSQL, Firebase, and NLP projects.
@@ -132,11 +135,14 @@ function App() {
               </a>
             </div>
           </div>
-          <aside className="profile-panel" aria-label="Profile summary">
-            <ProfileItem label="Degree" title="Bachelor (Hons) Computer Science" detail="Second Upper Honours · Final mark 68.2" />
-            <ProfileItem label="Focus" title="Backend engineering and applied AI systems" detail="Full-stack apps, mobile features, NLP, and data workflows" />
-            <ProfileItem label="Links" title="GitHub: AlvinHenn" detail="Edinburgh, United Kingdom" href="https://github.com/AlvinHenn" />
-          </aside>
+          <div className="hero-visual" aria-label="Profile photo and summary">
+            <img src={`${import.meta.env.BASE_URL}alvin-profile.jpeg`} alt="Portrait of Phang Lehenn, also known as Alvin" />
+            <aside className="profile-panel">
+              <ProfileItem label="Degree" title="Bachelor (Hons) Computer Science" detail="Second Upper Honours · Final mark 68.2" />
+              <ProfileItem label="Focus" title="Backend engineering and applied AI systems" detail="Full-stack apps, mobile features, NLP, and data workflows" />
+              <ProfileItem label="Links" title="GitHub: AlvinHenn" detail="Edinburgh, United Kingdom" href="https://github.com/AlvinHenn" />
+            </aside>
+          </div>
         </section>
 
         <section className="stats-band" aria-label="Highlights">
@@ -256,7 +262,7 @@ function App() {
       </main>
 
       <footer className="site-footer">
-        <span>© {year} Phang Lehenn</span>
+        <span>© {year} Phang Lehenn · Alvin</span>
         <a href="#top">Back to top</a>
       </footer>
     </>
